@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
+  <title>Samsung Calculator</title>
+
 </head>
 
 <body>
@@ -13,62 +14,115 @@
 
   <!-- [C] [()] [%] [/] -->
   <p>
-    <button>C</button>
+    <button onclick="
+    calculation=''
+    console.clear();
+    localStorage.clear();
+    ">C</button>
 
     <!--() does not work yet-->
-    <button>()</button>
+    <button onclick="
+    calculation+= ' () ';
+    console.log(calculation);
+    ">()</button>
 
     <!--% works like a percent operator like in phone calculator, not modulus-->
-    <button>%</button>
+    <button onclick="
+    //calculation+= ' % '; -->this does the modulus operation
+    calculation /=100;
+    console.log(calculation);
+    ">%</button>
 
-    <button>/</button>
+    <button onclick="
+    calculation+= ' / ';
+    console.log(calculation);
+    ">/</button>
 
-    <button>x</button>
+    <button onclick="
+    calculation = calculation.slice(0,-1);
+    console.log(calculation);
+    ">x</button>
   </p>
 
   <!-- [7] [8] [9] [*]-->
   <p>
-    <button>7</button>
+    <button onclick="
+    updateCalculation('7');
+    ">7</button>
 
-    <button>8</button>
+    <button onclick="
+    updateCalculation('8');
+    ">8</button>
 
-    <button>9</button>
+    <button onclick="
+    updateCalculation('9');
+    ">9</button>
 
-    <button>*</button>
+    <button onclick="
+    updateCalculation('*');
+    ">*</button>
   </p>
 
   <!-- [4] [5] [6] [-] -->
   <p>
-    <button>4</button>
+    <button onclick="
+    updateCalculation('4');
+    ">4</button>
 
-    <button>5</button>
+    <button onclick="
+    updateCalculation('5');
+    ">5</button>
 
-    <button>6</button>
+    <button onclick="
+    updateCalculation('6');
+    ">6</button>
 
-    <button>-</button>
+    <button onclick="
+    updateCalculation('-');
+    ">-</button>
 
   </p>
 
   <!-- [1] [2] [3] [+] -->
   <p>
-    <button>1</button>
+    <button onclick="
+    updateCalculation('1');
+    ">1</button>
 
-    <button>2</button>
+    <button onclick="
+    updateCalculation('2');
+    ">2</button>
 
-    <button>3</button>
+    <button onclick="
+    updateCalculation('3');
+    ">3</button>
 
-    <button>+</button>
+    <button onclick="
+    updateCalculation('+');
+    ">+</button>
   </p>
 
   <p> <!-- [+/-] [0] [.] [=] -->
-    <button>+/-</button>
+    <button onclick="
+    calculation = calculation*-1;
+    console.log(calculation);
+  ">+/-</button>
 
-    <button>0</button>
+    <button onclick="
+    updateCalculation('0');
+    ">0</button>
 
-    <button>.</button>
+    <button onclick="
+    updateCalculation('.');
+    ">.</button>
 
-    <button>=</button>
+    <button onclick="
+    calculation = eval(calculation);
+    console.log(calculation);
+    ">=</button>
   </p>
+
+  <script src='script.js'></script>
 </body>
 
 </html>
