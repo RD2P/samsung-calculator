@@ -14,13 +14,20 @@
 
 <body>
   <div class="screen">
-    <div class="display">Display</div>
-    <div class="special-btns">
-      <button onclick="
-    calculation = calculation.slice(0,-1);
-    console.log(calculation);
-    ">x</button>
+    <div class="top-info-bar">
+      <div class="camera">o</div>
     </div>
+    <div class="display">Display
+      <div id="base"></div>
+    </div>
+    <div class="special-btns">
+      <div class="backspace-btn" onclick="
+        calculation = calculation.slice(0,-1);
+        console.log(calculation);">
+        <img class="backspace-icon" src="icons/backspace-btn-icon.png">
+      </div>
+    </div>
+
 
     <div class="btn-grid">
       <!-- [C] [()] [%] [/] -->
