@@ -1,31 +1,48 @@
-
-
-.display{
-  height: 80px;
+body {
+  background-color: gray;
 }
-
-.btn-grid{
-  width: 380px;
-  display: grid;
-  padding: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 1px solid gray;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-  .btn{
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    background-color: rgb(235, 231, 231);
-    margin: 10px;
-    border: 1px solid black;
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 20px;
-    transition: 0.15s;
+  .screen{
+    background-color: rgb(253,253,253);
+    width: 380px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
   }
 
-  .btn:hover{
-    background-color: rgb(212, 205, 205);
-  }
+    .js-display{
+      height: 100px;
+    }
+
+    .btn-grid{
+      width: 100%;
+      display: grid;
+      place-items: center center;
+    
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      background-color: aliceblue;
+    }
+
+      .btn{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background-color: rgb(235, 231, 231);
+        margin: 10px;
+        border: 0;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 20px;
+        transition: 0.2s;
+      }
+
+        .btn:hover{
+          background-color: rgb(212, 205, 205);
+        }
+        .btn:active{
+          background-color: rgb(173, 167, 167);
+        }
+    .home-nav-bar{
+  background-color: rgb(113, 122, 129);
+  display: flex;
+    }
+
+

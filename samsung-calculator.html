@@ -13,114 +13,122 @@
 </head>
 
 <body>
-  <div class="display">Display</div>
-  <div>
-    <button onclick="
-  calculation = calculation.slice(0,-1);
-  console.log(calculation);
-  ">x</button>
+  <div class="screen">
+    <div class="js-display">Display</div>
+    <div class="special-btns">
+      <button onclick="
+    calculation = calculation.slice(0,-1);
+    console.log(calculation);
+    ">x</button>
+    </div>
+
+    <div class="btn-grid">
+      <!-- [C] [()] [%] [/] -->
+      <button class="btn" class="btn" onclick="
+    calculation=''
+    console.clear();
+    localStorage.clear();
+    ">C</button>
+
+      <!--() does not work yet-->
+      <button class="btn" onclick="
+    calculation+= ' () ';
+    console.log(calculation);
+    ">()</button>
+
+      <!--% works like a percent operator like in phone calculator, not modulus-->
+      <button class="btn" onclick="
+    //calculation+= ' % '; -->this does the modulus operation
+    calculation /=100;
+    console.log(calculation);
+    ">%</button>
+
+      <button class="btn" onclick="
+    calculation+= ' / ';
+    console.log(calculation);
+    ">/</button>
+
+      <!-- [7] [8] [9] [*]-->
+
+      <button class="btn" onclick="
+    updateCalculation('7');
+    ">7</button>
+
+      <button class="btn" onclick="
+    updateCalculation('8');
+    ">8</button>
+
+      <button class="btn" onclick="
+    updateCalculation('9');
+    ">9</button>
+
+      <button class="btn" onclick="
+    updateCalculation('*');
+    ">*</button>
+
+      <!-- [4] [5] [6] [-] -->
+
+      <button class="btn" onclick="
+    updateCalculation('4');
+    ">4</button>
+
+      <button class="btn" onclick="
+    updateCalculation('5');
+    ">5</button>
+
+      <button class="btn" onclick="
+    updateCalculation('6');
+    ">6</button>
+
+      <button class="btn" onclick="
+    updateCalculation('-');
+    ">-</button>
+
+      <!-- [1] [2] [3] [+] -->
+
+      <button class="btn" onclick="
+    updateCalculation('1');
+    ">1</button>
+
+      <button class="btn" onclick="
+    updateCalculation('2');
+    ">2</button>
+
+      <button class="btn" onclick="
+    updateCalculation('3');
+    ">3</button>
+
+      <button class="btn" onclick="
+    updateCalculation('+');
+    ">+</button>
+
+      <!-- [+/-] [0] [.] [=] -->
+      <button class="btn" onclick="
+    calculation = calculation*-1;
+    console.log(calculation);
+  ">+/-</button>
+
+      <button class="btn" onclick="
+    updateCalculation('0');
+    ">0</button>
+
+      <button class="btn" onclick="
+    updateCalculation('.');
+    ">.</button>
+
+      <button class="btn" onclick="
+    calculation = eval(calculation);
+    console.log(calculation);
+    ">=</button>
+
+    </div>
+
+    <div class="home-nav-bar">
+      text
+    </div>
+
   </div>
 
-  <div class="btn-grid">
-    <!-- [C] [()] [%] [/] -->
-    <button class="btn" class="btn" onclick="
-  calculation=''
-  console.clear();
-  localStorage.clear();
-  ">C</button>
-
-    <!--() does not work yet-->
-    <button class="btn" onclick="
-  calculation+= ' () ';
-  console.log(calculation);
-  ">()</button>
-
-    <!--% works like a percent operator like in phone calculator, not modulus-->
-    <button class="btn" onclick="
-  //calculation+= ' % '; -->this does the modulus operation
-  calculation /=100;
-  console.log(calculation);
-  ">%</button>
-
-    <button class="btn" onclick="
-  calculation+= ' / ';
-  console.log(calculation);
-  ">/</button>
-
-    <!-- [7] [8] [9] [*]-->
-
-    <button class="btn" onclick="
-  updateCalculation('7');
-  ">7</button>
-
-    <button class="btn" onclick="
-  updateCalculation('8');
-  ">8</button>
-
-    <button class="btn" onclick="
-  updateCalculation('9');
-  ">9</button>
-
-    <button class="btn" onclick="
-  updateCalculation('*');
-  ">*</button>
-
-    <!-- [4] [5] [6] [-] -->
-
-    <button class="btn" onclick="
-  updateCalculation('4');
-  ">4</button>
-
-    <button class="btn" onclick="
-  updateCalculation('5');
-  ">5</button>
-
-    <button class="btn" onclick="
-  updateCalculation('6');
-  ">6</button>
-
-    <button class="btn" onclick="
-  updateCalculation('-');
-  ">-</button>
-
-    <!-- [1] [2] [3] [+] -->
-
-    <button class="btn" onclick="
-  updateCalculation('1');
-  ">1</button>
-
-    <button class="btn" onclick="
-  updateCalculation('2');
-  ">2</button>
-
-    <button class="btn" onclick="
-  updateCalculation('3');
-  ">3</button>
-
-    <button class="btn" onclick="
-  updateCalculation('+');
-  ">+</button>
-
-    <!-- [+/-] [0] [.] [=] -->
-    <button class="btn" onclick="
-  calculation = calculation*-1;
-  console.log(calculation);
-">+/-</button>
-
-    <button class="btn" onclick="
-  updateCalculation('0');
-  ">0</button>
-
-    <button class="btn" onclick="
-  updateCalculation('.');
-  ">.</button>
-
-    <button class="btn" onclick="
-  calculation = eval(calculation);
-  console.log(calculation);
-  ">=</button>
-
-  </div>
 
   <script src='script.js'></script>
 </body>
