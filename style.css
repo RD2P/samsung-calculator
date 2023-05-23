@@ -1,0 +1,31 @@
+
+
+.display{
+  height: 80px;
+}
+
+.btn-grid{
+  width: 380px;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 1px solid gray;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+  .btn{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: rgb(235, 231, 231);
+    margin: 10px;
+    border: 1px solid black;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 20px;
+    transition: 0.15s;
+  }
+
+  .btn:hover{
+    background-color: rgb(212, 205, 205);
+  }
