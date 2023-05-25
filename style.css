@@ -1,5 +1,6 @@
 body {
   background-color: gray;
+  padding: 40px;
 }
 
   /*screen*/ 
@@ -10,6 +11,7 @@ body {
     padding: 10px;
     border: 15px solid rgb(46, 44, 44);
     border-radius: 25px;
+    font-family: 'Instrument Sans', sans-serif;
   }
 
     /*top info bar*/ 
@@ -25,10 +27,13 @@ body {
         height: 20px;
         width: 20px;
         border: 1px solid rgb(241, 231, 231);
-        padding: 2px;
+        padding: 3px 2px 2px 0;
         border-radius: 100%;
         display: flex;
-        place-content: center;
+        justify-content: center;
+        align-items: center;
+        color: rgb(73, 69, 69);
+        font-size: 20px;
       }
 
     
@@ -87,7 +92,6 @@ body {
         background-color: rgb(235, 231, 231);
         margin: 10px;
         border: 0;
-        font-family: 'Instrument Sans', sans-serif;
         font-size: 20px;
         transition: 0.2s;
       }
