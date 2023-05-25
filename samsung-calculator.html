@@ -17,13 +17,14 @@
     <div class="top-info-bar">
       <div class="camera">C</div>
     </div>
-    <div class="display">Display
-      <div id="base"></div>
+
+    <div class="display">
+      <div class="blinking-cursor"></div>
     </div>
     <div class="special-btns">
       <div class="backspace-btn" onclick="
         calculation = calculation.slice(0,-1);
-        console.log(calculation);">
+        display.innerHTML = calculation;">
         <img class="backspace-icon" src="icons/backspace-btn-icon.png">
       </div>
     </div>
@@ -33,26 +34,25 @@
       <!-- [C] [()] [%] [/] -->
       <button class="btn" class="btn" onclick="
     calculation=''
-    console.clear();
+    display.innerHTML = '';
     localStorage.clear();
     ">C</button>
 
       <!--() does not work yet-->
       <button class="btn" onclick="
     calculation+= ' () ';
-    console.log(calculation);
+    display.innerHTML = calculation;
     ">()</button>
 
       <!--% works like a percent operator like in phone calculator, not modulus-->
       <button class="btn" onclick="
     //calculation+= ' % '; -->this does the modulus operation
     calculation /=100;
-    console.log(calculation);
+    display.innerHTML = calculation;
     ">%</button>
 
       <button class="btn" onclick="
-    calculation+= ' / ';
-    console.log(calculation);
+    updateCalculation(' / ');
     ">/</button>
 
       <!-- [7] [8] [9] [*]-->
@@ -112,7 +112,7 @@
       <!-- [+/-] [0] [.] [=] -->
       <button class="btn" onclick="
     calculation = calculation*-1;
-    console.log(calculation);
+    display.innerHTML = calculation;
   ">+/-</button>
 
       <button class="btn" onclick="
@@ -125,7 +125,8 @@
 
       <button class="btn" onclick="
     calculation = eval(calculation);
-    console.log(calculation);
+    display.innerHTML = calculation;
+    localStorage.setItem('calculation', calculation);
     ">=</button>
 
     </div>

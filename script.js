@@ -1,10 +1,10 @@
 let calculation = '';
+let display = document.querySelector('.display');
 
-
-console.log(localStorage.getItem('calculation') || 'Fresh page');
+display.innerHTML = (localStorage.getItem('calculation') || '<div class="blinking-cursor"></div>');
 
 function updateCalculation(num) {
   calculation += num;
-  console.log(calculation);
+  display.innerHTML = calculation;
   localStorage.setItem('calculation', calculation);
 }
