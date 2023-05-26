@@ -30,10 +30,18 @@ body {
     /*top info bar*/ 
     .top-info-bar{
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      position: relative;
+  
     }  
 
+      .top-bar-icon{
+        display: flex;
+        align-self: center;
+        height: 20px;
+      }
       .camera{
+        justify-self: start;
         background-color: rgb(27, 26, 26);
         height: 20px;
         width: 20px;
@@ -45,6 +53,8 @@ body {
         align-items: center;
         color: rgb(73, 69, 69);
         font-size: 20px;
+        position: absolute;
+        left: 169px;
       }
 
     @keyframes cursor-blink {
