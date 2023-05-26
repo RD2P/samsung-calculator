@@ -56,14 +56,14 @@ body {
 
     /*Display*/    
     .display{
-      width: 100%;
+      width: 100%-10px;
       height: 240px;
       background-color: antiquewhite;
       font-size: 30px;
       display: flex;
       justify-content: end;
       align-items: end;
-
+      padding-right: 20px;
       
     }
 
@@ -124,6 +124,7 @@ body {
         border: 0;
         font-size: 28px;
         transition: 0.2s;
+        cursor: pointer;
       }
       
     .c-btn{
@@ -153,7 +154,8 @@ body {
       margin-top: 20px;
     }
       .icon{
-        width: 20px;
+        width: 14px;
+        height: 17px;
       }
 
 
