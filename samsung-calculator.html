@@ -13,128 +13,131 @@
 </head>
 
 <body>
-  <div class="screen">
-    <div class="top-info-bar">
-      <div class="camera">C</div>
-    </div>
 
-    <div class="display">
-      <div class="blinking-cursor"></div>
-    </div>
-    <div class="special-btns">
-      <div class="backspace-btn" onclick="
-        calculation = calculation.slice(0,-1);
-        display.innerHTML = calculation;">
-        <img class="backspace-icon" src="icons/backspace-btn-icon.png">
+  <div class="case">
+    <div class="screen">
+      <div class="top-info-bar">
+        <div class="camera">C</div>
       </div>
-    </div>
+
+      <div class="display">
+        <div class="blinking-cursor"></div>
+      </div>
+      <div class="special-btns">
+        <div class="backspace-btn" onclick="
+            calculation = calculation.slice(0,-1);
+            display.innerHTML = calculation;">
+          <img class="backspace-icon" src="icons/backspace-btn-icon.png">
+        </div>
+      </div>
 
 
-    <div class="btn-grid">
-      <!-- [C] [()] [%] [/] -->
-      <button class="btn" class="btn" onclick="
-    calculation=''
-    display.innerHTML = '';
-    localStorage.clear();
-    ">C</button>
+      <div class="btn-grid">
+        <!-- [C] [()] [%] [/] -->
+        <button class="btn c-btn" onclick="
+        calculation=''
+        display.innerHTML = '';
+        localStorage.clear();
+        ">C</button>
 
-      <!--() does not work yet-->
-      <button class="btn" onclick="
-    calculation+= ' () ';
-    display.innerHTML = calculation;
-    ">()</button>
+        <!--() does not work yet-->
+        <button class="btn greentext" onclick="
+        calculation+= ' () ';
+        display.innerHTML = calculation;
+        ">()</button>
 
-      <!--% works like a percent operator like in phone calculator, not modulus-->
-      <button class="btn" onclick="
-    //calculation+= ' % '; -->this does the modulus operation
-    calculation /=100;
-    display.innerHTML = calculation;
-    ">%</button>
+        <!--% works like a percent operator like in phone calculator, not modulus-->
+        <button class="btn greentext" onclick="
+        //calculation+= ' % '; -->this does the modulus operation
+        calculation /=100;
+        display.innerHTML = calculation;
+        ">%</button>
 
-      <button class="btn" onclick="
-    updateCalculation(' / ');
-    ">/</button>
+        <button class="btn greentext" onclick="
+        updateCalculation(' / ');
+        ">÷</button>
 
-      <!-- [7] [8] [9] [*]-->
+        <!-- [7] [8] [9] [*]-->
 
-      <button class="btn" onclick="
-    updateCalculation('7');
-    ">7</button>
+        <button class="btn" onclick="
+        updateCalculation('7');
+        ">7</button>
 
-      <button class="btn" onclick="
-    updateCalculation('8');
-    ">8</button>
+        <button class="btn" onclick="
+        updateCalculation('8');
+        ">8</button>
 
-      <button class="btn" onclick="
-    updateCalculation('9');
-    ">9</button>
+        <button class="btn" onclick="
+        updateCalculation('9');
+        ">9</button>
 
-      <button class="btn" onclick="
-    updateCalculation('*');
-    ">*</button>
+        <button class="btn greentext" onclick="
+        updateCalculation('*');
+        ">x</button>
 
-      <!-- [4] [5] [6] [-] -->
+        <!-- [4] [5] [6] [-] -->
 
-      <button class="btn" onclick="
-    updateCalculation('4');
-    ">4</button>
+        <button class="btn" onclick="
+        updateCalculation('4');
+        ">4</button>
 
-      <button class="btn" onclick="
-    updateCalculation('5');
-    ">5</button>
+        <button class="btn" onclick="
+        updateCalculation('5');
+        ">5</button>
 
-      <button class="btn" onclick="
-    updateCalculation('6');
-    ">6</button>
+        <button class="btn" onclick="
+        updateCalculation('6');
+        ">6</button>
 
-      <button class="btn" onclick="
-    updateCalculation('-');
-    ">-</button>
+        <button class="btn greentext" onclick="
+        updateCalculation('-');
+        ">-</button>
 
-      <!-- [1] [2] [3] [+] -->
+        <!-- [1] [2] [3] [+] -->
 
-      <button class="btn" onclick="
-    updateCalculation('1');
-    ">1</button>
+        <button class="btn" onclick="
+        updateCalculation('1');
+        ">1</button>
 
-      <button class="btn" onclick="
-    updateCalculation('2');
-    ">2</button>
+        <button class="btn" onclick="
+        updateCalculation('2');
+        ">2</button>
 
-      <button class="btn" onclick="
-    updateCalculation('3');
-    ">3</button>
+        <button class="btn" onclick="
+        updateCalculation('3');
+        ">3</button>
 
-      <button class="btn" onclick="
-    updateCalculation('+');
-    ">+</button>
+        <button class="btn  greentext" onclick="
+        updateCalculation('+');
+        ">+</button>
 
-      <!-- [+/-] [0] [.] [=] -->
-      <button class="btn" onclick="
-    calculation = calculation*-1;
-    display.innerHTML = calculation;
-  ">+/-</button>
+        <!-- [+/-] [0] [.] [=] -->
+        <button class="btn" onclick="
+        calculation = calculation*-1;
+        display.innerHTML = calculation;
+      ">+/-</button>
 
-      <button class="btn" onclick="
-    updateCalculation('0');
-    ">0</button>
+        <button class="btn" onclick="
+        updateCalculation('0');
+        ">0</button>
 
-      <button class="btn" onclick="
-    updateCalculation('.');
-    ">.</button>
+        <button class="btn" onclick="
+        updateCalculation('.');
+        ">.</button>
 
-      <button class="btn" onclick="
-    calculation = eval(calculation);
-    display.innerHTML = calculation;
-    localStorage.setItem('calculation', calculation);
-    ">=</button>
+        <button class="btn equal-btn" onclick="
+        calculation = eval(calculation);
+        display.innerHTML = calculation;
+        localStorage.setItem('calculation', calculation);
+        ">=</button>
 
-    </div>
+      </div>
 
-    <div class="home-nav-bar">
-      <img class='icon' src="icons/hamburger-icon.png">
-      <img class='icon' src="icons/home-icon.png">
-      <img class='icon' src="icons/back-icon.png">
+      <div class="home-nav-bar">
+        <img class='icon' src="icons/hamburger-icon.png">
+        <img class='icon' src="icons/home-icon.png">
+        <img class='icon' src="icons/back-icon.png">
+      </div>
     </div>
 
   </div>
