@@ -1,7 +1,7 @@
 let calculation = '';
 let display = document.querySelector('.display');
 
-display.innerHTML = (localStorage.getItem('calculation') || '<div class="blinking-cursor"></div>');
+display.innerHTML = (localStorage.getItem('calculation') || '');
 
 function updateCalculation(num) {
   calculation += num;

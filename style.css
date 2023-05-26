@@ -31,7 +31,6 @@ body {
     .top-info-bar{
       display: flex;
       justify-content: center;
-      background-color: aquamarine;
     }  
 
       .camera{
@@ -54,17 +53,19 @@ body {
       }
     }
 
-    /*Display*/    
+    /*Display*/   
+    .display-wrapper{
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      padding-right: 30px;
+    } 
     .display{
       width: 100%-10px;
       height: 240px;
-      background-color: antiquewhite;
-      font-size: 30px;
+      font-size: 30px;  
       display: flex;
-      justify-content: end;
-      align-items: end;
-      padding-right: 20px;
-      
+      align-items: center;
     }
 
     .blinking-cursor::after {
@@ -165,5 +166,5 @@ body {
       }
       
       .zborder {
-        border: 2px solid green;
+        border: 2px solid rgb(128, 0, 53);
       }
