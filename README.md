@@ -1,7 +1,8 @@
 # Samsung Calculator App
-This project is an implementation of a calculator app designed to resemble the Samsung calculator. The app provides a user interface with buttons for numerical input, basic arithmetic operations, and additional functionalities like backspace, clear, and equal. The app allows users to perform calculations and displays the result on the screen.
+This project, written with HTML, CSS, and JavaScript, is an implementation of a calculator app designed to resemble the Samsung calculator. The app provides a user interface with buttons for numerical input, basic arithmetic operations, and additional functionalities like backspace, clear, and equal. The app allows users to perform calculations and displays the result on the screen.
 
 ![image](https://github.com/RD2P/samsung-calculator/assets/66042641/2bf42d40-8cfd-4974-931e-4060289b9be6)
+Figure 1: Screenshot of the UI
 
 # Features
 
@@ -14,7 +15,7 @@ This project is an implementation of a calculator app designed to resemble the S
 
 # Usage
 
-1. Launch the app by opening the HTML file in a web browser.
+1. Clone the repository and launch the app by opening the HTML file.
 2. Use the numerical buttons to input numbers for your calculation.
 3. Use the arithmetic operation buttons to perform the desired calculation.
 4. Utilize the special buttons for additional operations like percentage or backspace.
@@ -23,17 +24,8 @@ This project is an implementation of a calculator app designed to resemble the S
 
 # Technologies Used
 
-* HTML: Provides the structure and elements of the calculator app.
-* CSS: Defines the styles and layout of the app.
-* JavaScript: Implements the functionality and logic of the calculator app.
+* HTML, CSS, JavaScript
 
-# Files
-
-* index.html: The main HTML file that contains the structure and elements of the app.
-* style.css: The CSS file that defines the styles and layout for the app.
-* script.js: The JavaScript file that implements the functionality and logic of the app.
-
-# Credits
 This project is inspired by the Samsung calculator and designed to resemble its user interface.
 Please note that this is a simplified implementation and may not cover all possible edge cases or complex calculations.
 
