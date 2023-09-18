@@ -5,7 +5,8 @@ This project, written with HTML, CSS, and JavaScript, is an implementation of a 
 
 * HTML, CSS, JavaScript
 
-![image](https://github.com/RD2P/samsung-calculator/assets/66042641/2bf42d40-8cfd-4974-931e-4060289b9be6)
+![image](https://github.com/RD2P/samsung-calculator/assets/66042641/b5c4be6d-f3e0-4f8a-90d6-80f95d471ddf)
+
 Figure 1: Screenshot of the UI
 
 # Features
