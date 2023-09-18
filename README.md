@@ -15,7 +15,7 @@ Figure 1: Screenshot of the UI
 
 # Usage
 
-1. Clone the repository and launch the app by opening the HTML file.
+1. Go to the Github Pages site at https://rd2p.github.io/samsung-calculator/ or clone the repository and launch the app by opening the HTML file.
 2. Use the numerical buttons to input numbers for your calculation.
 3. Use the arithmetic operation buttons to perform the desired calculation.
 4. Utilize the special buttons for additional operations like percentage or backspace.
