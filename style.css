@@ -1,11 +1,11 @@
-
-
 body {
   background-color: gray;
   padding: 40px;
+  display: flex;
+  justify-content: center;
 }
 
-.case{
+.case {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,168 +15,178 @@ body {
   border: 20px solid black;
   border-radius: 30px;
 }
-  /*screen*/ 
-  .screen{
-    background-color: rgb(253,253,253);
-    width: 380px;
-    height: 834px;
-    padding: 10px;
-    padding-top: 3px;
-    border: 8px solid rgb(107, 102, 102);
-    border-radius: 25px;
-    font-family: 'Instrument Sans', sans-serif;
+
+/*screen*/
+.screen {
+  background-color: rgb(253, 253, 253);
+  width: 380px;
+  height: 834px;
+  padding: 10px;
+  padding-top: 3px;
+  border: 8px solid rgb(107, 102, 102);
+  border-radius: 25px;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+/*top info bar*/
+.top-info-bar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+}
+
+.top-bar-icon {
+  display: flex;
+  align-self: center;
+  height: 20px;
+}
+
+.camera {
+  justify-self: start;
+  background-color: rgb(27, 26, 26);
+  height: 20px;
+  width: 20px;
+  border: 1px solid rgb(241, 231, 231);
+  padding: 3px 2px 2px 0;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(73, 69, 69);
+  font-size: 20px;
+  position: absolute;
+  left: 169px;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
   }
+}
 
-    /*top info bar*/ 
-    .top-info-bar{
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-  
-    }  
+/*Display*/
+.display-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 30px;
+}
 
-      .top-bar-icon{
-        display: flex;
-        align-self: center;
-        height: 20px;
-      }
-      .camera{
-        justify-self: start;
-        background-color: rgb(27, 26, 26);
-        height: 20px;
-        width: 20px;
-        border: 1px solid rgb(241, 231, 231);
-        padding: 3px 2px 2px 0;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgb(73, 69, 69);
-        font-size: 20px;
-        position: absolute;
-        left: 169px;
-      }
+.display {
+  width: 100%-10px;
+  max-width: 370px;
+  height: 240px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
 
-    @keyframes cursor-blink {
-      0% {
-        opacity: 0;
-      }
-    }
-
-    /*Display*/   
-    .display-wrapper{
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      padding-right: 30px;
-    } 
-    .display{
-      width: 100%-10px;
-      max-width: 370px;
-      height: 240px;
-      font-size: 30px;  
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .blinking-cursor::after {
-      content: "";
-      width: 2px;
-      height: 40px;
-      background: green;
-      display: inline-block;
-      animation: cursor-blink 1s steps(2) infinite;
-    }
-
-  
-
-    
-    
-    /*special btns*/ 
-    .special-btns{
-      background-color: #FBFBFB;
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      height: 60px;
-      padding-right: 30px;
-
-    }
-
-      .backspace-btn{
-        background-color: #FBFBFB;
-        width: 30px;
-        align-content: center;
-        justify-content: center;
-      }
-
-      .backspace-icon{
-        width: 100%;
-      }
-      .backspace-icon:hover{
-        opacity: 0.9;
-      }
-
-
-    /*btn grid*/ 
-    .btn-grid{
-      width: 100%;
-      display: grid;
-      padding-top: 20px;
-      place-items: center center;
-      border-top: 1px solid lightgray;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-      .btn{
-        width: 70px;
-        height: 70px;
-        border-radius: 100%;
-        background-color: rgb(245, 241, 241);
-        margin: 10px;
-        border: 0;
-        font-size: 28px;
-        transition: 0.2s;
-        cursor: pointer;
-      }
-      
-    .c-btn{
-      color: rgb(206, 44, 44);
-    }
-     .greentext{
-      color: green;
-    }
-    .equal-btn{
-      background-color: green;
-      color: white;
-    }
-        .btn:hover{
-          background-color: rgb(212, 205, 205);
-        }
-        .btn:active{
-          background-color: rgb(173, 167, 167);
-        }
-    
-   
-
-    /*home nav bar*/ 
-    .home-nav-bar{
-      display: flex;
-      justify-content: space-between;
-      padding: 0 60px;
-      margin-top: 20px;
-    }
-      .icon{
-        width: 14px;
-        height: 17px;
-      }
+.blinking-cursor::after {
+  content: "";
+  width: 2px;
+  height: 40px;
+  background: green;
+  display: inline-block;
+  animation: cursor-blink 1s steps(2) infinite;
+}
 
 
 
-      .zgreen {
-        background-color: green;
-      }
-      
-      .zborder {
-        border: 2px solid rgb(128, 0, 53);
-      }
+
+
+/*special btns*/
+.special-btns {
+  background-color: #FBFBFB;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 60px;
+  padding-right: 30px;
+
+}
+
+.backspace-btn {
+  background-color: #FBFBFB;
+  width: 30px;
+  align-content: center;
+  justify-content: center;
+}
+
+.backspace-icon {
+  width: 100%;
+}
+
+.backspace-icon:hover {
+  opacity: 0.9;
+}
+
+
+/*btn grid*/
+.btn-grid {
+  width: 100%;
+  display: grid;
+  padding-top: 20px;
+  place-items: center center;
+  border-top: 1px solid lightgray;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: rgb(245, 241, 241);
+  margin: 10px;
+  border: 0;
+  font-size: 28px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.c-btn {
+  color: rgb(206, 44, 44);
+}
+
+.greentext {
+  color: green;
+}
+
+.equal-btn {
+  background-color: green;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(212, 205, 205);
+}
+
+.btn:active {
+  background-color: rgb(173, 167, 167);
+}
+
+
+
+/*home nav bar*/
+.home-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 14px;
+  height: 17px;
+}
+
+
+
+.zgreen {
+  background-color: green;
+}
+
+.zborder {
+  border: 2px solid rgb(128, 0, 53);
+}
