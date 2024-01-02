@@ -33,7 +33,6 @@ body {
   display: flex;
   justify-content: space-between;
   position: relative;
-
 }
 
 .top-bar-icon {
@@ -92,10 +91,6 @@ body {
   animation: cursor-blink 1s steps(2) infinite;
 }
 
-
-
-
-
 /*special btns*/
 .special-btns {
   background-color: #FBFBFB;
@@ -104,7 +99,6 @@ body {
   align-items: center;
   height: 60px;
   padding-right: 30px;
-
 }
 
 .backspace-btn {
@@ -121,7 +115,6 @@ body {
 .backspace-icon:hover {
   opacity: 0.9;
 }
-
 
 /*btn grid*/
 .btn-grid {
@@ -166,8 +159,6 @@ body {
   background-color: rgb(173, 167, 167);
 }
 
-
-
 /*home nav bar*/
 .home-nav-bar {
   display: flex;
@@ -180,8 +171,6 @@ body {
   width: 14px;
   height: 17px;
 }
-
-
 
 .zgreen {
   background-color: green;
