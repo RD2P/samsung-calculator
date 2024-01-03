@@ -41,13 +41,11 @@
         calculation=''
         display.innerHTML = '';
         localStorage.clear();
+        stack = []
         ">C</button>
 
-        <!--() does not work yet-->
-        <button class="btn greentext" onclick="
-        calculation+= ' () ';
-        display.innerHTML = calculation;
-        ">()</button>
+        <!--() -->
+        <button class="btn greentext" onclick="handleParenthesis()">()</button>
 
         <!--% works like a percent operator like in phone calculator, not modulus-->
         <button class="btn greentext" onclick="
@@ -129,11 +127,7 @@
         updateCalculation('.');
         ">.</button>
 
-        <button class="btn equal-btn" onclick="
-        calculation = eval(calculation);
-        display.innerHTML = calculation;
-        localStorage.setItem('calculation', calculation);
-        ">=</button>
+        <button class="btn equal-btn" onclick="handleEquals()">=</button>
 
       </div>
 
